@@ -1,3 +1,40 @@
 <h1>
-  {{title}}
+    {{title}}
 </h1>
+<input type="text" [(ngModel)]="state" />
+<button (click)="weatherInfo()">Input State</button>
+
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+
+<sebm-google-map [latitude]="lat" [longitude]="lng">
+    <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+</sebm-google-map>
+
+<table>
+    <tr>
+        <td>City:</td>
+        <td>{{name}}</td>
+    </tr>
+    <tr>
+        <td>Temperature:</td>
+        <td>{{temp}}</td>
+    </tr>
+    <tr>
+        <td>Humidity:</td>
+        <td>{{humidity}}</td>
+    </tr>
+    <tr>
+        <td>Pressure:</td>
+        <td>{{pressure}}</td>
+    </tr>
+    <tr>
+        <td>Cloudiness:</td>
+        <td>{{weather}}</td>
+    </tr>
+    <tr>
+        <td>Weather:</td>
+        <td>{{desc}}</td>
+    </tr>
+</table>
